@@ -1,0 +1,16 @@
+names:
+- detail1
+- detail2
+- doc_quad
+- face
+- signature
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: pass-tjaqk
+  url: https://universe.roboflow.com/hackathon-ndbvw/pass-tjaqk/dataset/2
+  version: 2
+  workspace: hackathon-ndbvw
+test: ../test/images
+train: Pass-2/train/images
+val: Pass-2/valid/images
