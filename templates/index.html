@@ -49,13 +49,13 @@
             border-color: #cc5200;
         }
 
-        .form-control-file {
+        .form-control-file, .country-select {
             background: #fff;
             border-radius: 5px;
             border: 1px solid #ccc;
             display: block;
             width: 50%;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
         }
 
         #result {
@@ -79,6 +79,13 @@
 
         <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
             <div class="form-group">
+                <label for="country">Выберите страну:</label>
+                <select class="country-select" id="country" name="country">
+                    <option value="azerbaijan">Азербайджан</option>
+                    <option value="estonia">Эстония</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="file">Выберите изображение:</label>
                 <input type="file" class="form-control-file" id="file" name="file" required>
                 <span class="filename"></span>
@@ -97,22 +104,21 @@
         });
 
         $('#uploadForm').on('submit', function(e) {
-        e.preventDefault();
-        var formData = new FormData(this);
-        $.ajax({
-        url: $(this).attr('action'),
-        type: 'POST',
-        data: formData,
-        success: function(data) {
-            $('#result').html(data.replace(/\n/g, "<br>"));
-            $('body, html').css('background', 'url("https://img.freepik.com/free-photo/black-background-with-leaves-vegetation-texture_23-2149872513.jpg?t=st=1714684845~exp=1714688445~hmac=aa922729a9efbcf12ba1cefc0182123fa33f72b2a808809b465aacb46defc48a&w=826") no-repeat center center fixed').css('background-size', 'cover');
-        },
-        cache: false,
-        contentType: false,
-        processData: false
-    });
-});
-
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: formData,
+                success: function(data) {
+                    $('#result').html(data.replace(/\n/g, "<br>"));
+                    $('body, html').css('background', 'url("https://img.freepik.com/free-photo/black-background-with-leaves-vegetation-texture_23-2149872513.jpg?t=st=1714684845~exp=1714688445~hmac=aa922729a9efbcf12ba1cefc0182123fa33f72b2a808809b465aacb46defc48a&w=826") no-repeat center center fixed').css('background-size', 'cover');
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
     });
     </script>
 </body>

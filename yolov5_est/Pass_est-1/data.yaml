@@ -1,0 +1,16 @@
+names:
+- detail1
+- detail2
+- doc_quad
+- face
+- signature
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: pass_est
+  url: https://universe.roboflow.com/hackathon-ndbvw/pass_est/dataset/1
+  version: 1
+  workspace: hackathon-ndbvw
+test: ../test/images
+train: Pass_est-1/train/images
+val: Pass_est-1/valid/images
