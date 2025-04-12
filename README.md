@@ -1,4 +1,4 @@
-# SAFE_SCAN — Document Authenticity Verification System
+# SAFE_SCAN - Document Authenticity Verification System
 
 **SAFE_SCAN** is an AI-powered document verification system designed to detect forgery and validate the authenticity of official documents. The system currently supports passport verification for Azerbaijan and ID card verification for Estonia.
 
