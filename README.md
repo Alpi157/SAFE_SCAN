@@ -54,3 +54,11 @@ Update paths in app.py and processor classes accordingly
 6. **Run the application**
 python app.py
 Open http://127.0.0.1:5000 in your browser.
+
+---
+
+## License
+
+**MIT License** – © 2025 Alpar Arman
+
+Feel free to use, modify, and distribute – a citation or star is always appreciated!
